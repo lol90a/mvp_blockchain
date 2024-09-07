@@ -1,0 +1,21 @@
+type Transaction = struct {
+  sender: str,
+  receiver: str,
+  amount: u64,
+};
+
+type BlockchainState = vec Transaction;
+
+type BlockchainEvent = enum {
+  TransactionAdded(Transaction),
+  BlockchainViewed(BlockchainState),
+};
+
+constructor {
+  New : ();
+};
+
+service Blockchain {
+  AddTransaction : (sender: str, receiver: str, amount: u64) -> BlockchainEvent;
+  ViewBlockchain : () -> BlockchainState;
+};
