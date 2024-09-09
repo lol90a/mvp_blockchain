@@ -26,11 +26,6 @@ mvp_blockchain/
 - `app/`: Contains the Rust code for the blockchain smart contract.
 - `wasm/`: Handles the WebAssembly build for the smart contract and includes the build script (`build.rs`).
 
-### Frontend
-
-- `frontend/`: A React.js interface that interacts with the blockchain smart contract. This allows users to add transactions and view the state of the blockchain.
-
----
 
 ## Prerequisites
 
@@ -73,7 +68,7 @@ This will produce a `.wasm` file in the `target/wasm32-unknown-unknown/release` 
 
 - **`wasm/src/lib.rs`**: The main logic for the smart contract handling blockchain transactions.
 - **`Sails.idl`**: Interface definition for the smart contract, describing the services and events.
-- **`frontend/src`**: React.js components that communicate with the smart contract via the Gear API.
+
 
 ---
 
